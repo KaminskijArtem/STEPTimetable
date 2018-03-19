@@ -12,6 +12,6 @@ namespace TestBCSETimeTableProj.DBDAO
         public int IdFaculty { get; set; }
         public string NameFaculty { get; set; }
 
-        public virtual List<Group> Group { get; set; }
+        public List<Group> Group { get; set; }
     }
 }

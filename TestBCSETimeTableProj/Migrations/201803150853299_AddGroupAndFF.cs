@@ -27,7 +27,7 @@ namespace TestBCSETimeTableProj.Migrations
                         EduLevel = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.IdGroup)
-                .ForeignKey("dbo.Faculties", t => t.IdFaculty, cascadeDelete: true)
+                .ForeignKey("dbo.Faculties", t => t.IdFaculty)
                 .ForeignKey("dbo.Flows", t => t.IdFlow)
                 .Index(t => t.IdFlow)
                 .Index(t => t.IdFaculty);

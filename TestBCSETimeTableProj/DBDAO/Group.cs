@@ -17,6 +17,6 @@ namespace TestBCSETimeTableProj.DBDAO
 
         public Faculty Faculty { get; set; }
         public Flow Flow { get; set; }
-        //public List<Record> Record { get; set; }
+        public List<Record> Record { get; set; }
     }
 }

@@ -149,9 +149,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="DBDAO\Cancellation.cs" />
+    <Compile Include="DBDAO\Chair.cs" />
+    <Compile Include="DBDAO\Classroom.cs" />
     <Compile Include="DBDAO\Faculty.cs" />
     <Compile Include="DBDAO\Flow.cs" />
     <Compile Include="DBDAO\Group.cs" />
+    <Compile Include="DBDAO\Lecturer.cs" />
+    <Compile Include="DBDAO\Record.cs" />
+    <Compile Include="DBDAO\Subject.cs" />
+    <Compile Include="DBDAO\SubjectFor.cs" />
+    <Compile Include="DBDAO\SubjectType.cs" />
     <Compile Include="DBDAO\TestBCSETimeTableProjContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -164,7 +173,12 @@
     <Compile Include="Migrations\201803150853299_AddGroupAndFF.Designer.cs">
       <DependentUpon>201803150853299_AddGroupAndFF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803191841397_AllTables.cs" />
+    <Compile Include="Migrations\201803191841397_AllTables.Designer.cs">
+      <DependentUpon>201803191841397_AllTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\GroupViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -190,7 +204,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -204,10 +220,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\DetailsWeek.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -228,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803150853299_AddGroupAndFF.resx">
       <DependentUpon>201803150853299_AddGroupAndFF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803191841397_AllTables.resx">
+      <DependentUpon>201803191841397_AllTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

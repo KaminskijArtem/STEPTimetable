@@ -1,0 +1,23 @@
+﻿@using TestBCSETimeTableProj.Models;
+@model List<GroupViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table">
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <h4>@(item.NameGroup)</h4>
+                </td>
+                <td>
+                    <a href="@Url.Action("DetailsWeek", "Student", new { subgroup = 1, idgroup = item.IdGroup })" class="btn btn-info">Подгруппа 1</a>
+                    <a href="@Url.Action("DetailsWeek", "Student", new { subgroup = 2, idgroup = item.IdGroup })" class="btn btn-warning">Подгруппа 2</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
